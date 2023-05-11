@@ -3,13 +3,13 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.json({
     message: 'Hey this is my API running...',
   });
 });
 
-app.get('/about', (req, res) => {
+app.get('/api/about', (req, res) => {
   res.json({
     message: 'This is my about route...',
   });
