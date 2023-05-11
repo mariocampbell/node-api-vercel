@@ -1,15 +1,14 @@
 {
-  "version": 2,
-  "build": [
+  "rewrites": [
     {
-      "src": "index.js",
-      "use": "@now/node"
+      "source": "/api/(.*)",
+      "destination": "/api"
     }
   ],
-  "routes": [
+  "builds": [
     {
-      "src": "/(.*)",
-      "dest": "index.js"
+      "src": "/api/index.js",
+      "use": "@now/node"
     }
   ]
 }
